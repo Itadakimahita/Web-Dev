@@ -1,0 +1,6 @@
+<div class="min-h-screen bg-gray-100 flex flex-col items-center p-6">
+  <app-category (categorySelected)="onCategorySelected($event)"></app-category>
+  <app-product-list [products]="filteredProducts"></app-product-list>
+</div>
+
+<router-outlet />
