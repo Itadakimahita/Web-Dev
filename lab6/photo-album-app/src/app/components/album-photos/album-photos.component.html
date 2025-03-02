@@ -1,0 +1,13 @@
+<!-- src/app/components/album-photos/album-photos.component.html -->
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">Photos for Album {{ albumId }}</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div *ngFor="let photo of photos" class="bg-gray-100 p-4 rounded-lg shadow-md">
+        <p class="text-gray-800 mb-2">{{ photo?.title }}</p>
+        <img [src]="photo?.thumbnailUrl" [alt]="photo?.title" class="w-full h-auto rounded" />
+      </div>
+    </div>
+    <button (click)="goBack()" class="mt-4 bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition duration-200">
+      Return
+    </button>
+  </div>

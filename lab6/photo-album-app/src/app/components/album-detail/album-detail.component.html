@@ -1,0 +1,23 @@
+
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">Album Details</h1>
+    <div *ngIf="album" class="bg-gray-100 p-6 rounded-lg shadow-md">
+      <p class="text-gray-800 mb-2"><strong>ID:</strong> {{ album?.id }}</p>
+      <p class="text-gray-800 mb-2"><strong>User ID:</strong> {{ album?.userId }}</p>
+      <div class="mb-4">
+        <label class="block text-gray-800 mb-1"><strong>Title:</strong>{{ album?.title }}</label>
+        <input [(ngModel)]="editedTitle" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Edit title" />
+      </div>
+      <div class="space-x-2">
+        <button (click)="saveChanges()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition duration-200">
+          Save
+        </button>
+        <button (click)="goBack()" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transition duration-200">
+          Return
+        </button>
+        <button (click)="goToPhotos()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-200">
+          Photos
+        </button>
+      </div>
+    </div>
+  </div>
