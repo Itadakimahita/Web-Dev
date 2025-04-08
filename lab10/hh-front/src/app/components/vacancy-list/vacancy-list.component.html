@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let vacancy of vacancies">
+      {{ vacancy.name }} - Salary: {{ vacancy.salary }} ({{ vacancy.description }})
+    </li>
+  </ul>
+<div *ngIf="vacancies.length === 0">
+    no vacancies available for this company.
+</div>
